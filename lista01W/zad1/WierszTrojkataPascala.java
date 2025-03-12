@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class WierszTrojkataPascala {
   private int n;
   private int[] wiersz;
