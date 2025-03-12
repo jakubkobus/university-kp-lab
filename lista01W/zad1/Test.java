@@ -12,7 +12,7 @@ public class Test {
       n = Integer.parseInt(args[0]);
 
       if(n < 0)
-        throw new NumberFormatException();
+        throw new NumberFormatException((args[i] + " - " + "nieprawidlowa dana");
 
       wiersz = new WierszTrojkataPascala(n);
       wiersz.wygenerujWiersz();
@@ -26,13 +26,13 @@ public class Test {
         int m = Integer.parseInt(args[i]);
 
         if(m < 0 || m > n)
-          throw new IllegalArgumentException();
+          throw new IllegalArgumentException(args[i] + " - " + "liczba spoza zakresu");
 
         System.out.println(args[i] + " - " + wiersz.m_tyElementWiersza(m));
       } catch(NumberFormatException e) {
-        System.out.println(args[i] + " - " + "nieprawidlowa dana");
+        System.out.println(e.getMessage());
       } catch(IllegalArgumentException e) {
-        System.out.println(args[i] + " - " + "liczba spoza zakresu");
+        System.out.println(e.getMessage());
       }
     }
   }
