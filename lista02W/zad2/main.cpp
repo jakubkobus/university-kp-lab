@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string>
 #include <stdexcept>
+
 #include "ArabRzym.hpp"
 #include "ArabRzymException.hpp"
 

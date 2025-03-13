@@ -2,6 +2,7 @@
 #define ARABRZYM_HPP
 
 #include <string>
+
 #include "ArabRzymException.hpp"
 
 class ArabRzym {
