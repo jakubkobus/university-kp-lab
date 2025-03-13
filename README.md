@@ -11,5 +11,5 @@ javac Name.java && java Name
 ## C++
 
 ```bash
-make compile && ./name
+make && ./name
 ```
