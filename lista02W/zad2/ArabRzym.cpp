@@ -12,16 +12,15 @@ const int ArabRzym::liczbyArabskie[] = {
 
 int ArabRzym::rzym2arab(const std::string &rzym)
 {
-  int result = 0;
-  int prevValue = 4000;
-  size_t i = 0;
+  int value, prevValue = 4000, result = 0, i = 0;
+  bool found;
 
   while(i < rzym.length()) {
-    bool found = false;
+    found = false;
 
-    for(int j = NUMS_SIZE - 1; j >= 0; j--) {
+    for(int j = NUMS_SIZE - 1; j >= 0 || !found; j--) {
       if(rzym.compare(i, liczbyRzymskie[j].length(), liczbyRzymskie[j]) == 0) {
-        int value = liczbyArabskie[j];
+        value = liczbyArabskie[j];
 
         if(value > prevValue)
           throw ArabRzymException("nieprawidlowy zapis");
@@ -30,7 +29,6 @@ int ArabRzym::rzym2arab(const std::string &rzym)
         prevValue = value;
         i += liczbyRzymskie[j].length();
         found = true;
-        break;
       }
     }
 
@@ -48,8 +46,8 @@ std::string ArabRzym::arab2rzym(int arab)
   
 
   std::string result;
-  for(int i = sizeof(liczbyArabskie) / sizeof(liczbyArabskie[0]) - 1; i >= 0; i--)
-    while (arab >= liczbyArabskie[i]) {
+  for(int i = NUMS_SIZE - 1; i >= 0; i--)
+    while(arab >= liczbyArabskie[i]) {
       result += liczbyRzymskie[i];
       arab -= liczbyArabskie[i];
     }

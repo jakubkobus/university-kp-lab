@@ -9,6 +9,8 @@ public class Test {
     WierszTrojkataPascala wiersz;
 
     try {
+      // Maksymalny wiersz jaki mozna policzyc to 33, ktorego najwieksza wartosc wynosi 1_166_803_110
+      // W przypadku n = 34 najwieksza wartosc przekracza limit typu int (2^31 - 1) o okolo 150 milionow
       n = Integer.parseInt(args[0]);
 
       if(n < 0)

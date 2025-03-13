@@ -8,16 +8,15 @@ public class ArabRzym {
   };
 
   public static int rzym2arab(String rzym) throws ArabRzymException {
-    int result = 0;
-    int prevValue = 4000;
-    int i = 0;
+    int value, prevValue = 4000, result = 0, i = 0;
+    boolean found;
 
-    while (i < rzym.length()) {
-      boolean found = false;
+    while(i < rzym.length()) {
+      found = false;
 
-      for(int j = liczbyArabskie.length - 1; j >= 0; j--) {
+      for(int j = liczbyArabskie.length - 1; j >= 0 || !found; j--) {
         if(rzym.startsWith(liczbyRzymskie[j], i)) {
-          int value = liczbyArabskie[j];
+          value = liczbyArabskie[j];
 
           if(value > prevValue)
             throw new ArabRzymException("nieprawidlowy zapis");
@@ -26,7 +25,6 @@ public class ArabRzym {
           prevValue = value;
           i += liczbyRzymskie[j].length();
           found = true;
-          break;
         }
       }
 
