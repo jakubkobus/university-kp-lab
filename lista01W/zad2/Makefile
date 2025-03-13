@@ -4,7 +4,7 @@ TARGET = main
 SOURCES = main.cpp WierszTrojkataPascala.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
-compile: $(TARGET)
+all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^

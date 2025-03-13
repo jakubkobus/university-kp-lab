@@ -1,10 +1,10 @@
 CXX = g++
 CXXFLAGS = -Wall -pedantic
 TARGET = main
-SOURCES = main.cpp ArabRzym.cpp
+SOURCES = main.cpp ArabRzym.cpp ArabRzymException.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
-compile: $(TARGET)
+all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
