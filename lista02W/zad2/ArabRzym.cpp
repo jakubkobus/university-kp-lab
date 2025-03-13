@@ -15,10 +15,10 @@ int ArabRzym::rzym2arab(const std::string &rzym)
   int value, prevValue = 4000, result = 0, i = 0;
   bool found;
 
-  while(i < rzym.length()) {
+  while((size_t)i < rzym.length()) {
     found = false;
 
-    for(int j = NUMS_SIZE - 1; j >= 0 || !found; j--) {
+    for(int j = NUMS_SIZE - 1; j >= 0 && !found; j--) {
       if(rzym.compare(i, liczbyRzymskie[j].length(), liczbyRzymskie[j]) == 0) {
         value = liczbyArabskie[j];
 

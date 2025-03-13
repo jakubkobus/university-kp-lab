@@ -14,7 +14,7 @@ public class ArabRzym {
     while(i < rzym.length()) {
       found = false;
 
-      for(int j = liczbyArabskie.length - 1; j >= 0 || !found; j--) {
+      for(int j = liczbyArabskie.length - 1; j >= 0 && !found; j--) {
         if(rzym.startsWith(liczbyRzymskie[j], i)) {
           value = liczbyArabskie[j];
 
