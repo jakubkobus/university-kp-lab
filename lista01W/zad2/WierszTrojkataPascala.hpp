@@ -9,6 +9,7 @@ class WierszTrojkataPascala {
 
   public:
     WierszTrojkataPascala(int n);
+    ~WierszTrojkataPascala();
     void wygenerujWiersz();
     int m_tyElementWiersza(int m);
 };

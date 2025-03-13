@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
       n = std::stoi(argv[1]);
 
       if(n < 0)
-        throw std::invalid_argument("Negative number");
+        throw std::invalid_argument("");
 
       wiersz = new WierszTrojkataPascala(n);
       wiersz->wygenerujWiersz();
@@ -34,9 +34,9 @@ int main(int argc, char *argv[]) {
           throw std::out_of_range("");
 
         printf("%s - %d\n", argv[i], wiersz->m_tyElementWiersza(m));
-      } catch(const std::invalid_argument& e) {
+      } catch(const std::invalid_argument &e) {
         printf("%s - nieprawidlowa dana\n", argv[i]);
-      } catch(const std::out_of_range& e) {
+      } catch(const std::out_of_range &e) {
         printf("%s - liczba spoza zakresu\n", argv[i]);
       }
     }

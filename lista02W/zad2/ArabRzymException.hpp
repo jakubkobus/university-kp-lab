@@ -8,8 +8,9 @@ class ArabRzymException : public std::exception {
   std::string msg_;
 
   public:
-    explicit ArabRzymException(const std::string& msg) : msg_(msg) {}
-    virtual const char* what() const throw() { return msg_.c_str(); }
+    explicit ArabRzymException(const std::string &msg);
+    virtual ~ArabRzymException() noexcept;
+    virtual const char* what() const noexcept;
 };
 
 #endif // ARABRZYMEXCEPTION_HPP
