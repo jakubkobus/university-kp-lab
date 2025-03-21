@@ -31,6 +31,9 @@ public class ArabRzym {
       if(!found)
         throw new ArabRzymException("nieprawidlowy zapis");
     }
+    
+    if(result < 1 || result > 3999)
+      throw new ArabRzymException("liczba spoza zakresu (1-3999)");
 
     return result;
   }

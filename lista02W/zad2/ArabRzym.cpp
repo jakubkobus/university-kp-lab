@@ -35,6 +35,9 @@ int ArabRzym::rzym2arab(const std::string &rzym)
     if(!found)
       throw ArabRzymException("nieprawidlowy zapis");
   }
+  
+  if(result < 1 || result > 3999)
+    throw ArabRzymException("liczba spoza zakresu (1-3999)");
 
   return result;
 }
