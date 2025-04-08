@@ -5,7 +5,7 @@
 ## Java
 
 ```bash
-javac Name.java && java Name
+javac -d bin Name.java && java -cp bin Name
 ```
 
 ## C++
