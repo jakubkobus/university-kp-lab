@@ -39,7 +39,8 @@ public class WierszTrojkataPascalaGUI extends JFrame {
   private void runProcess() {
     String input = inputField.getText().trim();
     try {
-      if (input.isEmpty()) throw new IllegalArgumentException("Brak parametrow");
+      if(input.isEmpty())
+        throw new IllegalArgumentException("Brak parametrow");
       
       String[] parts = input.split("\\s+");
       if(parts.length < 2)

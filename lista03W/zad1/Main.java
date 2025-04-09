@@ -11,14 +11,18 @@ public class Main {
 
         switch(typ) {
           case "o":
-            if(i >= args.length) throw new IllegalArgumentException("Brak promienia dla kola");
+            if(i >= args.length)
+              throw new IllegalArgumentException("Brak promienia dla kola");
+
             figury.add(new Kolo(Double.parseDouble(args[i])));
             i += 1;
             break;
 
           case "p":
           case "s":
-            if(i >= args.length) throw new IllegalArgumentException("Brak boku");
+            if(i >= args.length)
+              throw new IllegalArgumentException("Brak boku");
+              
             double bok = Double.parseDouble(args[i]);
             if(typ.equals("p")) 
               figury.add(new Pieciokat(bok));
