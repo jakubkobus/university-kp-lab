@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Edytor kształtów: Plik źródłowy Circle.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Edytor kształtów
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Circle.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Circle_8java.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> java.awt.*;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classCircle.html">   18</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classCircle.html">Circle</a> <span class="keyword">extends</span> <a class="code" href="classShape.html">Shape</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">   19</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCircle.html#a926ccb49fb3332718a3498a04127f6b6">   28</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="classCircle.html#a926ccb49fb3332718a3498a04127f6b6">Circle</a>(<span class="keywordtype">int</span> <a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this.x = <a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this.y = y;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this.radius = <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  @Override</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classCircle.html#a4d461297c93ab15426355920ab9a8d04">   40</a></span>&#160;  <span class="keyword">public</span> Point <a class="code" href="classCircle.html#a4d461297c93ab15426355920ab9a8d04">getCenter</a>() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">new</span> Point(<a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>, y);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  @Override</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classCircle.html#a2922255eaf875ad1b2c2775681130a13">   51</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classCircle.html#a2922255eaf875ad1b2c2775681130a13">draw</a>(Graphics2D g, <span class="keywordtype">boolean</span> isActive) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    Graphics2D g2d = (Graphics2D) g.create();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    g2d.rotate(Math.toRadians(<a class="code" href="classShape.html#a8a92d9f6bd0f1847032a7fc52dd37a99">rotation</a>), <a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>, y);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    g2d.setColor(<a class="code" href="classShape.html#aad7e5043bb6732073f2e4b41d875bd22">color</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    g2d.fillOval(<a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a> - <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, y - <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, 2 * <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, 2 * <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span>(isActive) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      g2d.setStroke(<a class="code" href="classShape.html#ae829faa9abad4e9db7cbc28dfc4669c6">ACTIVE_STROKE</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      g2d.setColor(Color.BLACK);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      g2d.drawOval(<a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a> - <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, y - <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, 2 * <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>, 2 * <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    g2d.dispose();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  @Override</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classCircle.html#a1a28c0710a1df20b269c3476bb60a5df">   75</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classCircle.html#a1a28c0710a1df20b269c3476bb60a5df">wasClicked</a>(<span class="keywordtype">int</span> <a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>, <span class="keywordtype">int</span> y) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> Math.hypot(<a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a> - this.x, y - this.y) &lt;= <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  @Override</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classCircle.html#a21029ce38ff647aaea9ab042814986eb">   86</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classCircle.html#a21029ce38ff647aaea9ab042814986eb">move</a>(<span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a> += dx;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    y += dy;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  @Override</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classCircle.html#a7552cd83ef415e904897ba91fdbf338d">   97</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classCircle.html#a7552cd83ef415e904897ba91fdbf338d">scale</a>(<span class="keywordtype">double</span> factor) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a> = (int)(<a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a> * factor);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  @Override</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classCircle.html#a9705567f7c67762f674569231663a8f0">  107</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classCircle.html#a9705567f7c67762f674569231663a8f0">rotate</a>(<span class="keywordtype">double</span> degrees) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classShape.html#a8a92d9f6bd0f1847032a7fc52dd37a99">rotation</a> += degrees;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classCircle.html#aeb6a933db0a189c456be0bdb7f3e754c">  116</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classCircle.html#aeb6a933db0a189c456be0bdb7f3e754c">setRadius</a>(<span class="keywordtype">int</span> <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    this.radius = <a class="code" href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">radius</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="aclassCircle_html"><div class="ttname"><a href="classCircle.html">Circle</a></div><div class="ttdoc">Klasa Circle reprezentuje okrąg jako figurę geometryczną.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00018">Circle.java:18</a></div></div>
+<div class="ttc" id="aclassCircle_html_a1a28c0710a1df20b269c3476bb60a5df"><div class="ttname"><a href="classCircle.html#a1a28c0710a1df20b269c3476bb60a5df">Circle.wasClicked</a></div><div class="ttdeci">boolean wasClicked(int x, int y)</div><div class="ttdoc">Sprawdza, czy punkt o podanych współrzędnych znajduje się wewnątrz okręgu.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00075">Circle.java:75</a></div></div>
+<div class="ttc" id="aclassCircle_html_a21029ce38ff647aaea9ab042814986eb"><div class="ttname"><a href="classCircle.html#a21029ce38ff647aaea9ab042814986eb">Circle.move</a></div><div class="ttdeci">void move(int dx, int dy)</div><div class="ttdoc">Przesuwa okrąg o zadany wektor (dx, dy).</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00086">Circle.java:86</a></div></div>
+<div class="ttc" id="aclassCircle_html_a2922255eaf875ad1b2c2775681130a13"><div class="ttname"><a href="classCircle.html#a2922255eaf875ad1b2c2775681130a13">Circle.draw</a></div><div class="ttdeci">void draw(Graphics2D g, boolean isActive)</div><div class="ttdoc">Rysuje okrąg na podanym kontekście graficznym.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00051">Circle.java:51</a></div></div>
+<div class="ttc" id="aclassCircle_html_a4d461297c93ab15426355920ab9a8d04"><div class="ttname"><a href="classCircle.html#a4d461297c93ab15426355920ab9a8d04">Circle.getCenter</a></div><div class="ttdeci">Point getCenter()</div><div class="ttdoc">Zwraca środek okręgu jako punkt.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00040">Circle.java:40</a></div></div>
+<div class="ttc" id="aclassCircle_html_a6f404e40af9f2d9db2fdbd1c584e32a5"><div class="ttname"><a href="classCircle.html#a6f404e40af9f2d9db2fdbd1c584e32a5">Circle.radius</a></div><div class="ttdeci">int radius</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00019">Circle.java:19</a></div></div>
+<div class="ttc" id="aclassCircle_html_a7552cd83ef415e904897ba91fdbf338d"><div class="ttname"><a href="classCircle.html#a7552cd83ef415e904897ba91fdbf338d">Circle.scale</a></div><div class="ttdeci">void scale(double factor)</div><div class="ttdoc">Skaluje okrąg o podany współczynnik.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00097">Circle.java:97</a></div></div>
+<div class="ttc" id="aclassCircle_html_a926ccb49fb3332718a3498a04127f6b6"><div class="ttname"><a href="classCircle.html#a926ccb49fb3332718a3498a04127f6b6">Circle.Circle</a></div><div class="ttdeci">Circle(int x, int y, int radius)</div><div class="ttdoc">Tworzy nowy okrąg o zadanych parametrach.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00028">Circle.java:28</a></div></div>
+<div class="ttc" id="aclassCircle_html_a9705567f7c67762f674569231663a8f0"><div class="ttname"><a href="classCircle.html#a9705567f7c67762f674569231663a8f0">Circle.rotate</a></div><div class="ttdeci">void rotate(double degrees)</div><div class="ttdoc">Obraca okrąg o podany kąt w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00107">Circle.java:107</a></div></div>
+<div class="ttc" id="aclassCircle_html_aeb6a933db0a189c456be0bdb7f3e754c"><div class="ttname"><a href="classCircle.html#aeb6a933db0a189c456be0bdb7f3e754c">Circle.setRadius</a></div><div class="ttdeci">void setRadius(int radius)</div><div class="ttdoc">Ustawia promień okręgu.</div><div class="ttdef"><b>Definition:</b> <a href="Circle_8java_source.html#l00116">Circle.java:116</a></div></div>
+<div class="ttc" id="aclassShape_html"><div class="ttname"><a href="classShape.html">Shape</a></div><div class="ttdoc">Klasa Shape jest abstrakcyjną klasą bazową reprezentującą ogólną figurę geometryczną.</div><div class="ttdef"><b>Definition:</b> <a href="Shape_8java_source.html#l00020">Shape.java:20</a></div></div>
+<div class="ttc" id="aclassShape_html_a8a92d9f6bd0f1847032a7fc52dd37a99"><div class="ttname"><a href="classShape.html#a8a92d9f6bd0f1847032a7fc52dd37a99">Shape.rotation</a></div><div class="ttdeci">double rotation</div><div class="ttdef"><b>Definition:</b> <a href="Shape_8java_source.html#l00032">Shape.java:32</a></div></div>
+<div class="ttc" id="aclassShape_html_aad7e5043bb6732073f2e4b41d875bd22"><div class="ttname"><a href="classShape.html#aad7e5043bb6732073f2e4b41d875bd22">Shape.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="Shape_8java_source.html#l00030">Shape.java:30</a></div></div>
+<div class="ttc" id="aclassShape_html_abde114df1b36b51bde9a285a42e469bd"><div class="ttname"><a href="classShape.html#abde114df1b36b51bde9a285a42e469bd">Shape.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Shape_8java_source.html#l00031">Shape.java:31</a></div></div>
+<div class="ttc" id="aclassShape_html_ae829faa9abad4e9db7cbc28dfc4669c6"><div class="ttname"><a href="classShape.html#ae829faa9abad4e9db7cbc28dfc4669c6">Shape.ACTIVE_STROKE</a></div><div class="ttdeci">static final Stroke ACTIVE_STROKE</div><div class="ttdef"><b>Definition:</b> <a href="Shape_8java_source.html#l00021">Shape.java:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

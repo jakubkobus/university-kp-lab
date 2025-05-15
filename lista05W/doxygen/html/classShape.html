@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Edytor kształtów: Dokumentacja klasy Shape</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Edytor kształtów
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="#pro-static-attribs">Statyczne atrybuty chronione</a> &#124;
+<a href="classShape-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Shape<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa <a class="el" href="classShape.html" title="Klasa Shape jest abstrakcyjną klasą bazową reprezentującą ogólną figurę geometryczną.">Shape</a> jest abstrakcyjną klasą bazową reprezentującą ogólną figurę geometryczną.  
+ <a href="classShape.html#details">Więcej...</a></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Shape</div>
+<div class="dyncontent">
+<div class="center"><img src="classShape__inherit__graph.png" border="0" usemap="#aShape_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagram współpracy dla Shape:</div>
+<div class="dyncontent">
+<div class="center"><img src="classShape__coll__graph.png" border="0" usemap="#aShape_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a4a337b75866904a39c1a6e9c47c4cb83"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#a4a337b75866904a39c1a6e9c47c4cb83">draw</a> (Graphics2D g, boolean isActive)</td></tr>
+<tr class="memdesc:a4a337b75866904a39c1a6e9c47c4cb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje figurę na podanym kontekście graficznym.  <a href="classShape.html#a4a337b75866904a39c1a6e9c47c4cb83">Więcej...</a><br /></td></tr>
+<tr class="separator:a4a337b75866904a39c1a6e9c47c4cb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4dcdb12cb9d0ee4a95b9dd09d107a9"><td class="memItemLeft" align="right" valign="top">abstract boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#aad4dcdb12cb9d0ee4a95b9dd09d107a9">wasClicked</a> (int <a class="el" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a>, int y)</td></tr>
+<tr class="memdesc:aad4dcdb12cb9d0ee4a95b9dd09d107a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza, czy punkt o podanych współrzędnych znajduje się wewnątrz figury.  <a href="classShape.html#aad4dcdb12cb9d0ee4a95b9dd09d107a9">Więcej...</a><br /></td></tr>
+<tr class="separator:aad4dcdb12cb9d0ee4a95b9dd09d107a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4965dc23ddaab36f7d54a6d14b518ced"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#a4965dc23ddaab36f7d54a6d14b518ced">move</a> (int dx, int dy)</td></tr>
+<tr class="memdesc:a4965dc23ddaab36f7d54a6d14b518ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przesuwa figurę o zadany wektor (dx, dy).  <a href="classShape.html#a4965dc23ddaab36f7d54a6d14b518ced">Więcej...</a><br /></td></tr>
+<tr class="separator:a4965dc23ddaab36f7d54a6d14b518ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adedce888d073e9fc2d67332f12adf422"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#adedce888d073e9fc2d67332f12adf422">scale</a> (double factor)</td></tr>
+<tr class="memdesc:adedce888d073e9fc2d67332f12adf422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skaluje figurę o podany współczynnik.  <a href="classShape.html#adedce888d073e9fc2d67332f12adf422">Więcej...</a><br /></td></tr>
+<tr class="separator:adedce888d073e9fc2d67332f12adf422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec3ac7d9cb190e9678ddcc611ed3a74"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#a3ec3ac7d9cb190e9678ddcc611ed3a74">rotate</a> (double degrees)</td></tr>
+<tr class="memdesc:a3ec3ac7d9cb190e9678ddcc611ed3a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obraca figurę o podany kąt w stopniach.  <a href="classShape.html#a3ec3ac7d9cb190e9678ddcc611ed3a74">Więcej...</a><br /></td></tr>
+<tr class="separator:a3ec3ac7d9cb190e9678ddcc611ed3a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab615c8d2176ca4837aa6dc4b22aedfbc"><td class="memItemLeft" align="right" valign="top">abstract Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#ab615c8d2176ca4837aa6dc4b22aedfbc">getCenter</a> ()</td></tr>
+<tr class="memdesc:ab615c8d2176ca4837aa6dc4b22aedfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca środek figury jako punkt.  <a href="classShape.html#ab615c8d2176ca4837aa6dc4b22aedfbc">Więcej...</a><br /></td></tr>
+<tr class="separator:ab615c8d2176ca4837aa6dc4b22aedfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034f6a919c646803cd98401b6d8e79e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#a034f6a919c646803cd98401b6d8e79e1">setColor</a> (Color clr)</td></tr>
+<tr class="memdesc:a034f6a919c646803cd98401b6d8e79e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia kolor figury.  <a href="classShape.html#a034f6a919c646803cd98401b6d8e79e1">Więcej...</a><br /></td></tr>
+<tr class="separator:a034f6a919c646803cd98401b6d8e79e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:aad7e5043bb6732073f2e4b41d875bd22"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#aad7e5043bb6732073f2e4b41d875bd22">color</a> = Color.BLACK</td></tr>
+<tr class="separator:aad7e5043bb6732073f2e4b41d875bd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde114df1b36b51bde9a285a42e469bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#abde114df1b36b51bde9a285a42e469bd">x</a></td></tr>
+<tr class="separator:abde114df1b36b51bde9a285a42e469bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a92d9f6bd0f1847032a7fc52dd37a99"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#a8a92d9f6bd0f1847032a7fc52dd37a99">rotation</a> = 0</td></tr>
+<tr class="separator:a8a92d9f6bd0f1847032a7fc52dd37a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Statyczne atrybuty chronione</h2></td></tr>
+<tr class="memitem:ae829faa9abad4e9db7cbc28dfc4669c6"><td class="memItemLeft" align="right" valign="top">static final Stroke&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShape.html#ae829faa9abad4e9db7cbc28dfc4669c6">ACTIVE_STROKE</a></td></tr>
+<tr class="separator:ae829faa9abad4e9db7cbc28dfc4669c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa <a class="el" href="classShape.html" title="Klasa Shape jest abstrakcyjną klasą bazową reprezentującą ogólną figurę geometryczną.">Shape</a> jest abstrakcyjną klasą bazową reprezentującą ogólną figurę geometryczną. </p>
+<p>Klasa definiuje podstawowe właściwości figury, takie jak kolor, współrzędne (x, y), obrót oraz metody abstrakcyjne, które muszą zostać zaimplementowane przez klasy dziedziczące.</p>
+<p>Właściwości i metody tej klasy umożliwiają rysowanie figury, sprawdzanie, czy punkt znajduje się w jej obrębie, przesuwanie, skalowanie oraz obracanie.</p>
+<p>Klasa obsługuje również wyróżnianie aktywnej figury poprzez zastosowanie specjalnego stylu obramowania.</p>
+<dl class="section author"><dt>Autor</dt><dd>Jakub Kobus 283969 </dd></dl>
+<dl class="section version"><dt>Wersja</dt><dd>1.0 </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00020">20</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a4a337b75866904a39c1a6e9c47c4cb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a337b75866904a39c1a6e9c47c4cb83">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Shape.draw </td>
+          <td>(</td>
+          <td class="paramtype">Graphics2D&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isActive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje figurę na podanym kontekście graficznym. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Kontekst graficzny do rysowania (Graphics2D). </td></tr>
+    <tr><td class="paramname">isActive</td><td>Określa, czy figura jest aktywna (wyróżniona). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#aa9ed30d61b46d4454fa76de46ed08d2f">Rectangle</a>, <a class="el" href="classMyPolygon.html#a88e3f560ba450a34f3024e8943bd184f">MyPolygon</a> i <a class="el" href="classCircle.html#a2922255eaf875ad1b2c2775681130a13">Circle</a>.</p>
+
+</div>
+</div>
+<a id="ab615c8d2176ca4837aa6dc4b22aedfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab615c8d2176ca4837aa6dc4b22aedfbc">&#9670;&nbsp;</a></span>getCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract Point Shape.getCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca środek figury jako punkt. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Punkt będący środkiem figury. </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#a236774b5d82237f4047fecff5956b787">Rectangle</a>, <a class="el" href="classMyPolygon.html#a71cfd327051678d245b53912ffd7d56c">MyPolygon</a> i <a class="el" href="classCircle.html#a4d461297c93ab15426355920ab9a8d04">Circle</a>.</p>
+
+</div>
+</div>
+<a id="a4965dc23ddaab36f7d54a6d14b518ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4965dc23ddaab36f7d54a6d14b518ced">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Shape.move </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przesuwa figurę o zadany wektor (dx, dy). </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>Przesunięcie w osi X. </td></tr>
+    <tr><td class="paramname">dy</td><td>Przesunięcie w osi Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#a911854ccbe8e098bc7cb112dd322e281">Rectangle</a>, <a class="el" href="classMyPolygon.html#ad9bd4f8c795d5e0841a3126734324f54">MyPolygon</a> i <a class="el" href="classCircle.html#a21029ce38ff647aaea9ab042814986eb">Circle</a>.</p>
+
+</div>
+</div>
+<a id="a3ec3ac7d9cb190e9678ddcc611ed3a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec3ac7d9cb190e9678ddcc611ed3a74">&#9670;&nbsp;</a></span>rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Shape.rotate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>degrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obraca figurę o podany kąt w stopniach. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>Kąt obrotu w stopniach. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#aec535f366d02c33d6808bc8ddeafa587">Rectangle</a>, <a class="el" href="classMyPolygon.html#ac87a5257998653c72ce008438336aec6">MyPolygon</a> i <a class="el" href="classCircle.html#a9705567f7c67762f674569231663a8f0">Circle</a>.</p>
+
+</div>
+</div>
+<a id="adedce888d073e9fc2d67332f12adf422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedce888d073e9fc2d67332f12adf422">&#9670;&nbsp;</a></span>scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Shape.scale </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>factor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Skaluje figurę o podany współczynnik. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>Współczynnik skalowania (np. 1.1 powiększa, 0.9 pomniejsza). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#af81762c9a935d13b9c78a9ace4b81546">Rectangle</a>, <a class="el" href="classMyPolygon.html#a2ea2980aa4068504bc4a81b8af07aa90">MyPolygon</a> i <a class="el" href="classCircle.html#a7552cd83ef415e904897ba91fdbf338d">Circle</a>.</p>
+
+</div>
+</div>
+<a id="a034f6a919c646803cd98401b6d8e79e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034f6a919c646803cd98401b6d8e79e1">&#9670;&nbsp;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shape.setColor </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>clr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia kolor figury. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clr</td><td>Nowy kolor figury. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00085">85</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+
+</div>
+</div>
+<a id="aad4dcdb12cb9d0ee4a95b9dd09d107a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4dcdb12cb9d0ee4a95b9dd09d107a9">&#9670;&nbsp;</a></span>wasClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract boolean Shape.wasClicked </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprawdza, czy punkt o podanych współrzędnych znajduje się wewnątrz figury. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Współrzędna X punktu. </td></tr>
+    <tr><td class="paramname">y</td><td>Współrzędna Y punktu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli punkt znajduje się w figurze, w przeciwnym razie false. </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="classRectangle.html#a8ac51dfb2db5c5a6cc8449e20bf41a20">Rectangle</a>, <a class="el" href="classMyPolygon.html#af9e930c17362d40db03614be480476c7">MyPolygon</a> i <a class="el" href="classCircle.html#a1a28c0710a1df20b269c3476bb60a5df">Circle</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ae829faa9abad4e9db7cbc28dfc4669c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae829faa9abad4e9db7cbc28dfc4669c6">&#9670;&nbsp;</a></span>ACTIVE_STROKE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Stroke Shape.ACTIVE_STROKE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Wartość początkowa:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> BasicStroke(</div>
+<div class="line">    2, </div>
+<div class="line">    BasicStroke.CAP_BUTT, </div>
+<div class="line">    BasicStroke.JOIN_BEVEL, </div>
+<div class="line">    0, </div>
+<div class="line">    <span class="keyword">new</span> <span class="keywordtype">float</span>[]{5}, </div>
+<div class="line">    0 </div>
+<div class="line">  )</div>
+</div><!-- fragment -->
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00021">21</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+
+</div>
+</div>
+<a id="aad7e5043bb6732073f2e4b41d875bd22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7e5043bb6732073f2e4b41d875bd22">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color Shape.color = Color.BLACK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00030">30</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+
+</div>
+</div>
+<a id="a8a92d9f6bd0f1847032a7fc52dd37a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a92d9f6bd0f1847032a7fc52dd37a99">&#9670;&nbsp;</a></span>rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Shape.rotation = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00032">32</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+
+</div>
+</div>
+<a id="abde114df1b36b51bde9a285a42e469bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde114df1b36b51bde9a285a42e469bd">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shape.x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Shape_8java_source.html#l00031">31</a> pliku <a class="el" href="Shape_8java_source.html">Shape.java</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li><a class="el" href="Shape_8java_source.html">Shape.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
