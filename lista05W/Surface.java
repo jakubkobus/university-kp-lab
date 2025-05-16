@@ -4,6 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JColorChooser;
+import javax.swing.JDialog;
+
 /**
  * Klasa Surface jest rozszerzeniem klasy Panel i służy do rysowania oraz manipulacji
  * figurami geometrycznymi na powierzchni graficznej.
@@ -39,6 +42,7 @@ public class Surface extends Panel implements MouseListener, MouseMotionListener
   private PopupMenu colorMenu;
   private int startX, startY, offsetX, offsetY;
   private double scaleOffsetX, scaleOffsetY;
+  private JColorChooser colorChooser;
 
   public Surface() {
     setBackground(Color.WHITE);
@@ -46,29 +50,8 @@ public class Surface extends Panel implements MouseListener, MouseMotionListener
     addMouseMotionListener(this);
     addMouseWheelListener(this);
 
-    colorMenu = new PopupMenu();
-    String[] clrs = {"Czarny", "Czerwony", "Zielony", "Niebieski", "Żółty", "Pomarańczowy"};
+    colorChooser = new JColorChooser();
     
-    for(String clr : clrs) {
-      MenuItem item = new MenuItem(clr);
-      item.addActionListener(e -> {
-        if(activeShape != null) {
-          switch (clr) {
-            case "Czarny": activeShape.setColor(Color.BLACK); break;
-            case "Czerwony": activeShape.setColor(Color.RED); break;
-            case "Zielony": activeShape.setColor(Color.GREEN); break;
-            case "Niebieski": activeShape.setColor(Color.BLUE); break;
-            case "Żółty": activeShape.setColor(Color.YELLOW); break;
-            case "Pomarańczowy": activeShape.setColor(Color.ORANGE); break;
-          }
-
-          repaint();
-        }
-      });
-
-      colorMenu.add(item);
-    }
-    add(colorMenu);
     
     addKeyListener(new KeyAdapter() {
       public void keyPressed(KeyEvent e) {
@@ -174,8 +157,12 @@ public class Surface extends Panel implements MouseListener, MouseMotionListener
         }
       }
 
-      if(activeShape != null && e.getButton() == MouseEvent.BUTTON3)
-        colorMenu.show(this, x, y);
+      if(activeShape != null && e.getButton() == MouseEvent.BUTTON3) {
+        Color newColor = JColorChooser.showDialog(this, "Wybierz kolor", Color.BLACK);
+        if(newColor != null) {
+          activeShape.setColor(newColor);
+        }
+      }
       
       repaint();
     }
