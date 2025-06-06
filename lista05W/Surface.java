@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JColorChooser;
-import javax.swing.JDialog;
 
 /**
  * Klasa Surface jest rozszerzeniem klasy Panel i służy do rysowania oraz manipulacji
@@ -39,20 +38,14 @@ public class Surface extends Panel implements MouseListener, MouseMotionListener
   private List<Point> polygonPoints = new ArrayList<>();
   private Shape activeShape = null;
   private Shape currentShape = null;
-  private PopupMenu colorMenu;
   private int startX, startY, offsetX, offsetY;
   private double scaleOffsetX, scaleOffsetY;
-  private JColorChooser colorChooser;
 
   public Surface() {
     setBackground(Color.WHITE);
     addMouseListener(this);
     addMouseMotionListener(this);
-    addMouseWheelListener(this);
-
-    colorChooser = new JColorChooser();
-    
-    
+    addMouseWheelListener(this);    
     addKeyListener(new KeyAdapter() {
       public void keyPressed(KeyEvent e) {
         if(activeShape != null && e.isControlDown()) {
