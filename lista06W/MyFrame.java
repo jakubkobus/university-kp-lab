@@ -48,7 +48,7 @@ public class MyFrame extends Frame {
     setSize(800, 600);
     setVisible(true);
 
-    Timer timer = new Timer(100, e -> refresh());
+    Timer timer = new Timer(100, _ -> refresh());
     timer.start();
 
     addWindowListener(new WindowAdapter() {

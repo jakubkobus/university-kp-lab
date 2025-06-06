@@ -106,11 +106,6 @@ public class Board {
 
     Animal target = grid[newX][newY];
 
-    if (animal instanceof Wolf)
-      if (target instanceof Rabbit)
-        if (target.isSuspended())
-          return MoveStatus.INVALID;
-
     if (animal instanceof Wolf) {
       if (target instanceof Rabbit) {
         Rabbit rabbit = (Rabbit) target;
@@ -141,6 +136,11 @@ public class Board {
    * @return true jeśli pozycja jest poprawna, false w przeciwnym razie.
    */
   public synchronized boolean isValidPosition(int x, int y) {
+    if(x >= 0 && x < n && y >= 0 && y < m)
+      if(grid[x][y] instanceof Rabbit)
+        if(grid[x][y].isSuspended())
+          return false;
+
     return x >= 0 && x < n && y >= 0 && y < m;
   }
 
