@@ -1,9 +1,33 @@
 import java.util.*;
 
 /**
- * Main class to start the simulation.
+ * @file Main.java
+ * @brief Klasa uruchamiająca symulację wilka i królików.
+ *
+ *        Klasa Main odpowiada za inicjalizację planszy, rozmieszczenie zwierząt
+ *        (wilka i królików)
+ *        oraz uruchomienie graficznego interfejsu użytkownika.
+ *
+ *        Funkcjonalności:
+ *        - Odczyt parametrów symulacji z argumentów wiersza poleceń.
+ *        - Losowe rozmieszczenie wilka i królików na planszy.
+ *        - Uruchomienie wątków zwierząt.
+ *        - Inicjalizacja okna symulacji.
+ *
+ * @author Jakub Kobus 283969
  */
 public class Main {
+
+  /**
+   * Metoda główna programu. Inicjalizuje planszę, rozmieszcza zwierzęta i
+   * uruchamia GUI.
+   *
+   * @param args Argumenty wiersza poleceń: n m rabbits k
+   *             n - liczba wierszy planszy,
+   *             m - liczba kolumn planszy,
+   *             rabbits - liczba królików,
+   *             k - parametr przekazywany do zwierząt (np. czas życia).
+   */
   public static void main(String[] args) {
     if (args.length < 4) {
       System.out.println("Usage: java Main n m rabbits k");
@@ -17,7 +41,7 @@ public class Main {
     Board board = new Board(n, m);
     Random random = new Random();
 
-    // Place Wolf
+    // Umieszcza wilka na losowym, wolnym polu planszy.
     int wolfX, wolfY;
     do {
       wolfX = random.nextInt(n);
@@ -26,7 +50,7 @@ public class Main {
     Wolf wolf = new Wolf(wolfX, wolfY, board, k, random);
     board.addWolf(wolf);
 
-    // Place Rabbits
+    // Umieszcza króliki na losowych, wolnych polach planszy.
     for (int i = 0; i < numRabbits; i++) {
       int x, y;
       do {
@@ -40,7 +64,6 @@ public class Main {
 
     wolf.start();
 
-    // Start GUI
-    new SimulationGUI(board, n, m);
+    new MyFrame(board, n, m);
   }
 }

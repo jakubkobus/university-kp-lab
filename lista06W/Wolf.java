@@ -4,13 +4,39 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Represents a Wolf thread.
+ * @file Wolf.java
+ * @brief Klasa reprezentująca wilka w symulacji.
+ *
+ *        Klasa Wolf dziedziczy po klasie Animal i implementuje logikę
+ *        poruszania się wilka po planszy,
+ *        wyszukiwania najbliższego królika oraz zjadania królików. Wilk porusza
+ *        się w kierunku najbliższego
+ *        nie-zawieszonego królika, a po zjedzeniu królika odpoczywa przez kilka
+ *        cykli.
+ *
+ * @author Jakub Kobus 283969
  */
 public class Wolf extends Animal {
+
+  /**
+   * Konstruktor klasy Wolf.
+   *
+   * @param x      Początkowa współrzędna wiersza wilka.
+   * @param y      Początkowa współrzędna kolumny wilka.
+   * @param board  Referencja do planszy.
+   * @param k      Parametr sterujący (np. czas odpoczynku).
+   * @param random Generator liczb losowych.
+   */
   public Wolf(int x, int y, Board board, int k, Random random) {
     super(x, y, board, k, random);
   }
 
+  /**
+   * Główna pętla działania wilka. Wilk szuka najbliższego królika i porusza się w
+   * jego kierunku.
+   * Po zjedzeniu królika odpoczywa przez kilka cykli. Obsługuje również stan
+   * zawieszenia.
+   */
   @Override
   public void run() {
     while (!isInterrupted()) {
@@ -54,6 +80,12 @@ public class Wolf extends Animal {
     }
   }
 
+  /**
+   * Wyszukuje najbliższego nie-zawieszonego królika na planszy.
+   *
+   * @param rabbits Lista królików na planszy.
+   * @return Najbliższy królik lub null, jeśli brak dostępnych królików.
+   */
   private Rabbit findClosestRabbit(List<Rabbit> rabbits) {
     Rabbit closest = null;
     double minDist = Double.MAX_VALUE;
@@ -69,10 +101,22 @@ public class Wolf extends Animal {
     return closest;
   }
 
+  /**
+   * Oblicza odległość euklidesową od obecnej pozycji wilka do wskazanej pozycji.
+   *
+   * @param x2 Wiersz celu.
+   * @param y2 Kolumna celu.
+   * @return Odległość euklidesowa.
+   */
   private double distance(int x2, int y2) {
     return Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2));
   }
 
+  /**
+   * Generuje listę możliwych ruchów wilka (pola sąsiadujące).
+   *
+   * @return Lista możliwych pozycji do ruchu.
+   */
   private List<Point> generatePossibleMoves() {
     List<Point> moves = new ArrayList<>();
     for (int dx = -1; dx <= 1; dx++) {
@@ -89,6 +133,15 @@ public class Wolf extends Animal {
     return moves;
   }
 
+  /**
+   * Wybiera najlepszy ruch wilka, aby zbliżyć się do wskazanego królika.
+   * Jeśli możliwe jest wejście na pole z królikiem, wybiera ten ruch.
+   *
+   * @param target        Cel (królik), do którego wilk się zbliża.
+   * @param possibleMoves Lista możliwych ruchów.
+   * @return Najlepszy ruch (punkt docelowy) lub null, jeśli brak możliwych
+   *         ruchów.
+   */
   private Point selectBestMove(Rabbit target, List<Point> possibleMoves) {
     double minDist = Double.MAX_VALUE;
     List<Point> bestMoves = new ArrayList<>();

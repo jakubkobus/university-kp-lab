@@ -4,13 +4,37 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Represents a Rabbit thread.
+ * @file Rabbit.java
+ * @brief Klasa reprezentująca królika w symulacji.
+ *
+ *        Klasa Rabbit dziedziczy po klasie Animal i implementuje logikę
+ *        poruszania się królika po planszy.
+ *        Królik stara się unikać wilka, wybierając ruchy oddalające go od
+ *        drapieżnika, jeśli to możliwe.
+ *        Obsługuje również stan zawieszenia oraz losowe opóźnienia ruchów.
+ *
+ * @author Jakub Kobus 283969
  */
 public class Rabbit extends Animal {
+
+  /**
+   * Konstruktor klasy Rabbit.
+   *
+   * @param x      Początkowa współrzędna wiersza królika.
+   * @param y      Początkowa współrzędna kolumny królika.
+   * @param board  Referencja do planszy.
+   * @param k      Parametr sterujący (np. czas odpoczynku).
+   * @param random Generator liczb losowych.
+   */
   public Rabbit(int x, int y, Board board, int k, Random random) {
     super(x, y, board, k, random);
   }
 
+  /**
+   * Główna pętla działania królika. Królik unika wilka, wybierając ruchy
+   * oddalające go od drapieżnika,
+   * jeśli to możliwe. Obsługuje również stan zawieszenia.
+   */
   @Override
   public void run() {
     while (!isInterrupted()) {
@@ -42,6 +66,11 @@ public class Rabbit extends Animal {
     }
   }
 
+  /**
+   * Generuje listę możliwych ruchów królika (pola sąsiadujące).
+   *
+   * @return Lista możliwych pozycji do ruchu.
+   */
   private List<Point> generatePossibleMoves() {
     List<Point> moves = new ArrayList<>();
     for (int dx = -1; dx <= 1; dx++) {
@@ -58,6 +87,12 @@ public class Rabbit extends Animal {
     return moves;
   }
 
+  /**
+   * Filtruje ruchy, pozostawiając tylko te prowadzące na wolne pola.
+   *
+   * @param moves Lista możliwych ruchów.
+   * @return Lista ruchów prowadzących na wolne pola.
+   */
   private List<Point> filterValidMoves(List<Point> moves) {
     List<Point> valid = new ArrayList<>();
     for (Point move : moves) {
@@ -68,6 +103,14 @@ public class Rabbit extends Animal {
     return valid;
   }
 
+  /**
+   * Filtruje ruchy, pozostawiając tylko te, które oddalają królika od wilka.
+   *
+   * @param moves Lista możliwych ruchów.
+   * @param wolfX Wiersz wilka.
+   * @param wolfY Kolumna wilka.
+   * @return Lista ruchów oddalających od wilka.
+   */
   private List<Point> filterAwayMoves(List<Point> moves, int wolfX, int wolfY) {
     List<Point> away = new ArrayList<>();
     double currentDist = Math.sqrt(Math.pow(x - wolfX, 2) + Math.pow(y - wolfY, 2));
