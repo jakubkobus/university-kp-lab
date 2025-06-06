@@ -49,6 +49,11 @@ public class Board {
 
     Animal target = grid[newX][newY];
 
+    if(animal instanceof Wolf)
+      if(target instanceof Rabbit)
+        if(target.isSuspended())
+          return MoveStatus.INVALID;
+
     if (animal instanceof Wolf) {
       if (target instanceof Rabbit) {
         Rabbit rabbit = (Rabbit) target;
@@ -58,17 +63,16 @@ public class Board {
       }
     }
 
-    if (target != null && !(animal instanceof Wolf && target instanceof Rabbit)) {
+    if(target != null && !(animal instanceof Wolf && target instanceof Rabbit))
       return MoveStatus.INVALID;
-    }
 
     grid[oldX][oldY] = null;
     animal.setPosition(newX, newY);
     grid[newX][newY] = animal;
 
-    if (animal instanceof Wolf && target instanceof Rabbit) {
+    if(animal instanceof Wolf && target instanceof Rabbit)
       return MoveStatus.CAUGHT_RABBIT;
-    }
+
     return MoveStatus.MOVED;
   }
 
