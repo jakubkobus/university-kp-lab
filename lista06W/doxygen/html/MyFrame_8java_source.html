@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Symulacja: Plik źródłowy MyFrame.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Symulacja
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MyFrame.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="MyFrame_8java.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> java.awt.Color;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> java.awt.Frame;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.awt.GridLayout;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.awt.Panel;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.awt.event.MouseAdapter;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.awt.event.MouseEvent;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> java.awt.event.WindowAdapter;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.awt.event.WindowEvent;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> javax.swing.Timer;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classMyFrame.html">   21</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classMyFrame.html">MyFrame</a> <span class="keyword">extends</span> Frame {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">   22</a></span>&#160;  <span class="keyword">private</span> <span class="keyword">final</span> <a class="code" href="classBoard.html">Board</a> <a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">   23</a></span>&#160;  <span class="keyword">private</span> <span class="keyword">final</span> Panel[][] <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMyFrame.html#a64dbcc47d82aa472684c2786e55b4aa3">   33</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="classMyFrame.html#a64dbcc47d82aa472684c2786e55b4aa3">MyFrame</a>(<a class="code" href="classBoard.html">Board</a> <a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    this.board = <a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    setTitle(<span class="stringliteral">&quot;Symulacja&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    setLayout(<span class="keyword">new</span> GridLayout(n, m));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a> = <span class="keyword">new</span> Panel[n][m];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        Panel panel = <span class="keyword">new</span> Panel();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a>[i][j] = panel;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        add(panel);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        panel.addMouseListener(<span class="keyword">new</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html">CellMouseListener</a>(i, j));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    setSize(800, 600);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Timer timer = <span class="keyword">new</span> Timer(100, e -&gt; <a class="code" href="classMyFrame.html#a8f74dc5aa61f04a134206d211ec3fc47">refresh</a>());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    timer.start();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    addWindowListener(<span class="keyword">new</span> WindowAdapter() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      @Override</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">void</span> windowClosing(WindowEvent e) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        System.exit(0);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    });</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classMyFrame.html#a8f74dc5aa61f04a134206d211ec3fc47">   68</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="classMyFrame.html#a8f74dc5aa61f04a134206d211ec3fc47">refresh</a>() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">synchronized</span> (<a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a>.length; i++) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a>[i].length; j++) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          Animal animal = <a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>.<a class="code" href="classBoard.html#ae20fbddbcb6fd99f6a8f2a340c307b86">getAnimalAt</a>(i, j);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          Panel panel = <a class="code" href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">cells</a>[i][j];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <span class="keywordflow">if</span> (animal instanceof <a class="code" href="classWolf.html">Wolf</a>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            panel.setBackground(animal.isSuspended() ? Color.PINK : Color.RED);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (animal instanceof <a class="code" href="classRabbit.html">Rabbit</a>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            panel.setBackground(animal.isSuspended() ? Color.LIGHT_GRAY : Color.GRAY);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            panel.setBackground(Color.WHITE);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classMyFrame_1_1CellMouseListener.html">   90</a></span>&#160;  <span class="keyword">private</span> <span class="keyword">class </span><a class="code" href="classMyFrame_1_1CellMouseListener.html">CellMouseListener</a> <span class="keyword">extends</span> MouseAdapter {</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">   91</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">x</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">   92</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">y</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classMyFrame_1_1CellMouseListener.html#a7a0df94a1396a8be6a7981d7bc544f56">  100</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#a7a0df94a1396a8be6a7981d7bc544f56">CellMouseListener</a>(<span class="keywordtype">int</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">x</a>, <span class="keywordtype">int</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">y</a>) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      this.x = <a class="code" href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">x</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      this.y = <a class="code" href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">y</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    @Override</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classMyFrame_1_1CellMouseListener.html#a4adbb00df81e5d56ef6ab2f935671188">  111</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classMyFrame_1_1CellMouseListener.html#a4adbb00df81e5d56ef6ab2f935671188">mouseClicked</a>(MouseEvent e) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keyword">synchronized</span> (<a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Animal animal = <a class="code" href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">board</a>.<a class="code" href="classBoard.html#ae20fbddbcb6fd99f6a8f2a340c307b86">getAnimalAt</a>(<a class="code" href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">x</a>, <a class="code" href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">y</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (animal != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          animal.setSuspended(!animal.isSuspended());</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdef"><b>Definition:</b> <a href="Board_8java_source.html#l00021">Board.java:21</a></div></div>
+<div class="ttc" id="aclassBoard_html_ae20fbddbcb6fd99f6a8f2a340c307b86"><div class="ttname"><a href="classBoard.html#ae20fbddbcb6fd99f6a8f2a340c307b86">Board.getAnimalAt</a></div><div class="ttdeci">synchronized Animal getAnimalAt(int x, int y)</div><div class="ttdoc">Zwraca zwierzę znajdujące się na podanej pozycji planszy.</div><div class="ttdef"><b>Definition:</b> <a href="Board_8java_source.html#l00067">Board.java:67</a></div></div>
+<div class="ttc" id="aclassMyFrame_1_1CellMouseListener_html"><div class="ttname"><a href="classMyFrame_1_1CellMouseListener.html">MyFrame.CellMouseListener</a></div><div class="ttdoc">Prywatna klasa obsługująca kliknięcia myszy na panelach.</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00090">MyFrame.java:90</a></div></div>
+<div class="ttc" id="aclassMyFrame_1_1CellMouseListener_html_a03eeb889e519a4cf0161614b60d94cb3"><div class="ttname"><a href="classMyFrame_1_1CellMouseListener.html#a03eeb889e519a4cf0161614b60d94cb3">MyFrame.CellMouseListener.y</a></div><div class="ttdeci">final int y</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00092">MyFrame.java:92</a></div></div>
+<div class="ttc" id="aclassMyFrame_1_1CellMouseListener_html_a4adbb00df81e5d56ef6ab2f935671188"><div class="ttname"><a href="classMyFrame_1_1CellMouseListener.html#a4adbb00df81e5d56ef6ab2f935671188">MyFrame.CellMouseListener.mouseClicked</a></div><div class="ttdeci">void mouseClicked(MouseEvent e)</div><div class="ttdoc">Obsługuje kliknięcie myszy na panelu – zawiesza lub wznawia zwierzę.</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00111">MyFrame.java:111</a></div></div>
+<div class="ttc" id="aclassMyFrame_1_1CellMouseListener_html_a7a0df94a1396a8be6a7981d7bc544f56"><div class="ttname"><a href="classMyFrame_1_1CellMouseListener.html#a7a0df94a1396a8be6a7981d7bc544f56">MyFrame.CellMouseListener.CellMouseListener</a></div><div class="ttdeci">CellMouseListener(int x, int y)</div><div class="ttdoc">Konstruktor nasłuchiwacza kliknięć dla konkretnej komórki.</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00100">MyFrame.java:100</a></div></div>
+<div class="ttc" id="aclassMyFrame_1_1CellMouseListener_html_afbd1c0d02694e5baaf4beffea941173d"><div class="ttname"><a href="classMyFrame_1_1CellMouseListener.html#afbd1c0d02694e5baaf4beffea941173d">MyFrame.CellMouseListener.x</a></div><div class="ttdeci">final int x</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00091">MyFrame.java:91</a></div></div>
+<div class="ttc" id="aclassMyFrame_html"><div class="ttname"><a href="classMyFrame.html">MyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00021">MyFrame.java:21</a></div></div>
+<div class="ttc" id="aclassMyFrame_html_a3f66e55784191bd3983937fd0a0ff9b7"><div class="ttname"><a href="classMyFrame.html#a3f66e55784191bd3983937fd0a0ff9b7">MyFrame.cells</a></div><div class="ttdeci">final Panel[][] cells</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00023">MyFrame.java:23</a></div></div>
+<div class="ttc" id="aclassMyFrame_html_a64dbcc47d82aa472684c2786e55b4aa3"><div class="ttname"><a href="classMyFrame.html#a64dbcc47d82aa472684c2786e55b4aa3">MyFrame.MyFrame</a></div><div class="ttdeci">MyFrame(Board board, int n, int m)</div><div class="ttdoc">Konstruktor klasy MyFrame.</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00033">MyFrame.java:33</a></div></div>
+<div class="ttc" id="aclassMyFrame_html_a779f946e08487a7b3e7f3eb679445737"><div class="ttname"><a href="classMyFrame.html#a779f946e08487a7b3e7f3eb679445737">MyFrame.board</a></div><div class="ttdeci">final Board board</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00022">MyFrame.java:22</a></div></div>
+<div class="ttc" id="aclassMyFrame_html_a8f74dc5aa61f04a134206d211ec3fc47"><div class="ttname"><a href="classMyFrame.html#a8f74dc5aa61f04a134206d211ec3fc47">MyFrame.refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdoc">Odświeża kolory wszystkich paneli w zależności od stanu zwierząt na planszy.</div><div class="ttdef"><b>Definition:</b> <a href="MyFrame_8java_source.html#l00068">MyFrame.java:68</a></div></div>
+<div class="ttc" id="aclassRabbit_html"><div class="ttname"><a href="classRabbit.html">Rabbit</a></div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8java_source.html#l00018">Rabbit.java:18</a></div></div>
+<div class="ttc" id="aclassWolf_html"><div class="ttname"><a href="classWolf.html">Wolf</a></div><div class="ttdef"><b>Definition:</b> <a href="Wolf_8java_source.html#l00019">Wolf.java:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
