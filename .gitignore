@@ -2,4 +2,4 @@
 *.class
 *.o
 main
-bin/
+bin*/
