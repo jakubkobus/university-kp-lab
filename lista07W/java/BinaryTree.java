@@ -1,6 +1,14 @@
+/**
+ * Klasa reprezentująca drzewo binarne dowolnego typu porównywalnego.
+ * @author Jakub Kobus
+ */
 public class BinaryTree<T extends Comparable<T>> {
+  /** Szerokość węzła w rysunku drzewa */
   private final int NODE_WIDTH = 8;
 
+  /**
+   * Wewnętrzna klasa reprezentująca węzeł drzewa.
+   */
   private static class Node<T> {
     T value;
     Node<T> left, right;
@@ -10,12 +18,20 @@ public class BinaryTree<T extends Comparable<T>> {
     }
   }
 
+  /** Korzeń drzewa */
   private Node<T> root;
 
+  /**
+   * Wstawia nową wartość do drzewa.
+   * @param value wartość do wstawienia
+   */
   public synchronized void insert(T value) {
     root = insertRec(root, value);
   }
 
+  /** 
+   * Rekurencyjna metoda pomocnicza do wstawiania.
+   */
   private Node<T> insertRec(Node<T> node, T value) {
     if (node == null)
       return new Node<T>(value);
@@ -27,10 +43,18 @@ public class BinaryTree<T extends Comparable<T>> {
     return node;
   }
 
+  /**
+   * Sprawdza, czy wartość istnieje w drzewie.
+   * @param value szukana wartość
+   * @return true jeśli istnieje, false w przeciwnym razie
+   */
   public synchronized boolean search(T value) {
     return searchRec(root, value);
   }
 
+  /**
+   * Rekurencyjna metoda pomocnicza do wyszukiwania.
+   */
   private boolean searchRec(Node<T> node, T value) {
     if (node == null)
       return false;
@@ -40,12 +64,20 @@ public class BinaryTree<T extends Comparable<T>> {
     return cmp < 0 ? searchRec(node.left, value) : searchRec(node.right, value);
   }
 
+  /**
+   * Usuwa wartość z drzewa.
+   * @param value wartość do usunięcia
+   * @return true jeśli usunięto, false jeśli nie znaleziono
+   */
   public synchronized boolean delete(T value) {
     int before = size();
     root = deleteRec(root, value);
     return size() < before;
   }
 
+  /**
+   * Rekurencyjna metoda pomocnicza do usuwania.
+   */
   private Node<T> deleteRec(Node<T> node, T value) {
     if (node == null)
       return null;
@@ -68,6 +100,10 @@ public class BinaryTree<T extends Comparable<T>> {
     return node;
   }
 
+  /**
+   * Zwraca tekstową reprezentację drzewa (rysunek).
+   * @return rysunek drzewa jako String
+   */
   public synchronized String draw() {
     if (root == null)
       return null;
@@ -76,6 +112,9 @@ public class BinaryTree<T extends Comparable<T>> {
     return sb.toString();
   }
 
+  /**
+   * Rekurencyjna metoda pomocnicza do rysowania drzewa.
+   */
   private void drawRec(Node<T> node, StringBuilder sb, int depth) {
     if (node == null)
       return;
@@ -89,16 +128,27 @@ public class BinaryTree<T extends Comparable<T>> {
     drawRec(node.left, sb, depth + 1);
   }
 
+  /**
+   * Zwraca liczbę elementów w drzewie.
+   * @return liczba węzłów
+   */
   public int size() {
     return sizeRec(root);
   }
 
+  /**
+   * Rekurencyjna metoda pomocnicza do liczenia węzłów.
+   */
   private int sizeRec(Node<T> node) {
     if (node == null)
       return 0;
     return 1 + sizeRec(node.left) + sizeRec(node.right);
   }
 
+  /**
+   * Sprawdza, czy drzewo jest puste.
+   * @return true jeśli puste, false w przeciwnym razie
+   */
   public boolean isEmpty() {
     return root == null;
   }

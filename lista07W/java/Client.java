@@ -10,10 +10,24 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * Klient GUI do obsługi operacji na drzewie binarnym przez sieć.
+ * Pozwala wybrać typ drzewa, operację, wpisać wartość oraz wysłać żądanie do serwera.
+ * Wynik operacji sygnalizowany jest kolorem kropki, a rysunek drzewa wyświetlany w polu tekstowym.
+ * 
+ * Obsługiwane operacje: insert, delete, search, draw.
+ * Obsługiwane typy: int, double, string.
+ * 
+ * @author Jakub Kobus
+ */
 public class Client extends Application {
+  /** Pole wyboru typu danych */
   private ComboBox<String> typeBox, commandBox;
+  /** Pole do wpisania wartości */
   private TextField valueField;
+  /** Pole do wyświetlania rysunku drzewa */
   private TextArea drawArea;
+  /** Kółko sygnalizujące status operacji */
   private Circle statusCircle;
 
   private final String SERVER_HOST = "localhost";
@@ -23,6 +37,9 @@ public class Client extends Application {
     launch(args);
   }
 
+  /**
+   * Inicjalizuje GUI i obsługę zdarzeń.
+   */
   @Override
   public void start(Stage primaryStage) {
     typeBox = new ComboBox<>();
@@ -78,6 +95,9 @@ public class Client extends Application {
     primaryStage.show();
   }
 
+  /**
+   * Wysyła żądanie do serwera i obsługuje odpowiedź.
+   */
   private void sendRequest() {
     String command = commandBox.getValue();
     String type = typeBox.getValue();
@@ -88,6 +108,7 @@ public class Client extends Application {
       return;
     }
 
+    // Walidacja wejścia dla int i double
     if (!command.equals("draw")) {
       if (type.equals("int")) {
         try {
@@ -108,6 +129,7 @@ public class Client extends Application {
 
     String request = command + " " + type + (command.equals("draw") ? "" : " " + value);
 
+    // Czyści pole po wysłaniu
     javafx.application.Platform.runLater(() -> valueField.clear());
 
     Thread t = new Thread(() -> {
@@ -133,10 +155,18 @@ public class Client extends Application {
     t.start();
   }
 
+  /**
+   * Ustawia rysunek drzewa w polu tekstowym.
+   * @param text rysunek drzewa
+   */
   private void setDrawArea(String text) {
     javafx.application.Platform.runLater(() -> drawArea.setText(text));
   }
 
+  /**
+   * Ustawia kolor kropki statusu (zielony = sukces, czerwony = błąd).
+   * @param success true jeśli sukces, false jeśli błąd
+   */
   private void setStatus(boolean success) {
     javafx.application.Platform.runLater(() -> {
       statusCircle.setFill(success ? Color.GREEN : Color.RED);

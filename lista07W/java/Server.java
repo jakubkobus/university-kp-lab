@@ -2,17 +2,36 @@ import java.io.*;
 import java.net.*;
 import java.util.concurrent.*;
 
+/**
+ * Serwer obsługujący operacje na trzech drzewach binarnych (int, double, string) przez sieć.
+ * Odpowiada obiektami klasy Response na żądania klientów.
+ * 
+ * Obsługiwane operacje: insert, delete, search, draw.
+ * Obsługiwane typy: int, double, string.
+ * 
+ * @author Jakub Kobus
+ */
 public class Server {
+  /** Port nasłuchiwania serwera */
   private final int PORT = 1234;
 
+  /** Drzewo binarne dla typu int */
   private BinaryTree<Integer> intTree   = new BinaryTree<>();
+  /** Drzewo binarne dla typu double */
   private BinaryTree<Double> doubleTree = new BinaryTree<>();
+  /** Drzewo binarne dla typu string */
   private BinaryTree<String> stringTree = new BinaryTree<>();
 
+  /**
+   * Punkt wejścia serwera.
+   */
   public static void main(String[] args) {
     new Server().run();
   }
 
+  /**
+   * Uruchamia serwer i obsługuje klientów w osobnych wątkach.
+   */
   public void run() {
     ExecutorService pool = Executors.newCachedThreadPool();
     try (ServerSocket serverSocket = new ServerSocket(PORT)) {
@@ -26,6 +45,10 @@ public class Server {
     }
   }
 
+  /**
+   * Obsługuje pojedynczego klienta: odbiera żądania, wysyła odpowiedzi.
+   * @param clientSocket gniazdo klienta
+   */
   private void handleClient(Socket clientSocket) {
     try (
         ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
@@ -47,6 +70,11 @@ public class Server {
     }
   }
 
+  /**
+   * Przetwarza żądanie klienta i zwraca odpowiedni obiekt Response.
+   * @param request żądanie tekstowe
+   * @return odpowiedź Response
+   */
   private Response handleRequest(String request) {
     String[] parts = request.split("\\s+", 3);
     if (parts.length < 2)
@@ -75,6 +103,9 @@ public class Server {
     }
   }
 
+  /**
+   * Obsługuje operację insert dla danego typu.
+   */
   private Response handleInsert(String type, String value) {
     try {
       switch (type) {
@@ -95,6 +126,9 @@ public class Server {
     }
   }
 
+  /**
+   * Obsługuje operację delete dla danego typu.
+   */
   private Response handleDelete(String type, String value) {
     try {
       switch (type) {
@@ -118,6 +152,9 @@ public class Server {
     }
   }
 
+  /**
+   * Obsługuje operację search dla danego typu.
+   */
   private Response handleSearch(String type, String value) {
     try {
       switch (type) {
@@ -141,6 +178,9 @@ public class Server {
     }
   }
 
+  /**
+   * Obsługuje operację draw dla danego typu.
+   */
   private Response handleDraw(String type) {
     switch (type) {
       case "int":

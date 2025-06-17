@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drzewo binarne: Dokumentacja klasy Server</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drzewo binarne<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="classServer-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy Server</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Serwer obsługujący operacje na trzech drzewach binarnych (int, double, string) przez sieć.  
+ <a href="#details">Więcej...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ace0ce586af36c8024040a43db4054ab7" id="r_ace0ce586af36c8024040a43db4054ab7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace0ce586af36c8024040a43db4054ab7">run</a> ()</td></tr>
+<tr class="memdesc:ace0ce586af36c8024040a43db4054ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uruchamia serwer i obsługuje klientów w osobnych wątkach.  <br /></td></tr>
+<tr class="separator:ace0ce586af36c8024040a43db4054ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:aa3fbc6151e35b67da9fc169408539cf6" id="r_aa3fbc6151e35b67da9fc169408539cf6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3fbc6151e35b67da9fc169408539cf6">main</a> (String[] args)</td></tr>
+<tr class="memdesc:aa3fbc6151e35b67da9fc169408539cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punkt wejścia serwera.  <br /></td></tr>
+<tr class="separator:aa3fbc6151e35b67da9fc169408539cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:aab3dd3db9f808de2385e0a473c47c5e1" id="r_aab3dd3db9f808de2385e0a473c47c5e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab3dd3db9f808de2385e0a473c47c5e1">handleClient</a> (Socket clientSocket)</td></tr>
+<tr class="memdesc:aab3dd3db9f808de2385e0a473c47c5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje pojedynczego klienta: odbiera żądania, wysyła odpowiedzi.  <br /></td></tr>
+<tr class="separator:aab3dd3db9f808de2385e0a473c47c5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ec7e298fe7650284e843c6fcae5ba4" id="r_a96ec7e298fe7650284e843c6fcae5ba4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResponse.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96ec7e298fe7650284e843c6fcae5ba4">handleRequest</a> (String request)</td></tr>
+<tr class="memdesc:a96ec7e298fe7650284e843c6fcae5ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przetwarza żądanie klienta i zwraca odpowiedni obiekt <a class="el" href="classResponse.html" title="Klasa reprezentująca odpowiedź serwera na żądanie klienta.">Response</a>.  <br /></td></tr>
+<tr class="separator:a96ec7e298fe7650284e843c6fcae5ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c2fd24787d30ba53f7644da65c1624" id="r_ae5c2fd24787d30ba53f7644da65c1624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResponse.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5c2fd24787d30ba53f7644da65c1624">handleInsert</a> (String type, String value)</td></tr>
+<tr class="memdesc:ae5c2fd24787d30ba53f7644da65c1624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje operację insert dla danego typu.  <br /></td></tr>
+<tr class="separator:ae5c2fd24787d30ba53f7644da65c1624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6346743e1489653ff3c603ac393761ab" id="r_a6346743e1489653ff3c603ac393761ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResponse.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6346743e1489653ff3c603ac393761ab">handleDelete</a> (String type, String value)</td></tr>
+<tr class="memdesc:a6346743e1489653ff3c603ac393761ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje operację delete dla danego typu.  <br /></td></tr>
+<tr class="separator:a6346743e1489653ff3c603ac393761ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30119dedeb7f2f8a3fd6c85f2ddc89e4" id="r_a30119dedeb7f2f8a3fd6c85f2ddc89e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResponse.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30119dedeb7f2f8a3fd6c85f2ddc89e4">handleSearch</a> (String type, String value)</td></tr>
+<tr class="memdesc:a30119dedeb7f2f8a3fd6c85f2ddc89e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje operację search dla danego typu.  <br /></td></tr>
+<tr class="separator:a30119dedeb7f2f8a3fd6c85f2ddc89e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a5c302d548dedd073c9339f0fcae4e" id="r_ab4a5c302d548dedd073c9339f0fcae4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResponse.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4a5c302d548dedd073c9339f0fcae4e">handleDraw</a> (String type)</td></tr>
+<tr class="memdesc:ab4a5c302d548dedd073c9339f0fcae4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje operację draw dla danego typu.  <br /></td></tr>
+<tr class="separator:ab4a5c302d548dedd073c9339f0fcae4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:aa4e450c304096ba29cc41428f98449a2" id="r_aa4e450c304096ba29cc41428f98449a2"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4e450c304096ba29cc41428f98449a2">PORT</a> = 1234</td></tr>
+<tr class="memdesc:aa4e450c304096ba29cc41428f98449a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port nasłuchiwania serwera.  <br /></td></tr>
+<tr class="separator:aa4e450c304096ba29cc41428f98449a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be01a0476157ee0803e5d8483a69502" id="r_a7be01a0476157ee0803e5d8483a69502"><td class="memItemLeft" align="right" valign="top">BinaryTree&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be01a0476157ee0803e5d8483a69502">intTree</a> = new BinaryTree&lt;&gt;()</td></tr>
+<tr class="memdesc:a7be01a0476157ee0803e5d8483a69502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drzewo binarne dla typu int.  <br /></td></tr>
+<tr class="separator:a7be01a0476157ee0803e5d8483a69502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70301b3598482bd31d5286edec6c5ef5" id="r_a70301b3598482bd31d5286edec6c5ef5"><td class="memItemLeft" align="right" valign="top">BinaryTree&lt; Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70301b3598482bd31d5286edec6c5ef5">doubleTree</a> = new BinaryTree&lt;&gt;()</td></tr>
+<tr class="memdesc:a70301b3598482bd31d5286edec6c5ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drzewo binarne dla typu double.  <br /></td></tr>
+<tr class="separator:a70301b3598482bd31d5286edec6c5ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675a0e23d6ed4d2b05128932c9da5179" id="r_a675a0e23d6ed4d2b05128932c9da5179"><td class="memItemLeft" align="right" valign="top">BinaryTree&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a675a0e23d6ed4d2b05128932c9da5179">stringTree</a> = new BinaryTree&lt;&gt;()</td></tr>
+<tr class="memdesc:a675a0e23d6ed4d2b05128932c9da5179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drzewo binarne dla typu string.  <br /></td></tr>
+<tr class="separator:a675a0e23d6ed4d2b05128932c9da5179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Serwer obsługujący operacje na trzech drzewach binarnych (int, double, string) przez sieć. </p>
+<p>Odpowiada obiektami klasy <a class="el" href="classResponse.html" title="Klasa reprezentująca odpowiedź serwera na żądanie klienta.">Response</a> na żądania klientów.</p>
+<p>Obsługiwane operacje: insert, delete, search, draw. Obsługiwane typy: int, double, string.</p>
+<dl class="section author"><dt>Autor</dt><dd>Jakub Kobus </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00014">14</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="aab3dd3db9f808de2385e0a473c47c5e1" name="aab3dd3db9f808de2385e0a473c47c5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3dd3db9f808de2385e0a473c47c5e1">&#9670;&#160;</a></span>handleClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server.handleClient </td>
+          <td>(</td>
+          <td class="paramtype">Socket</td>          <td class="paramname"><span class="paramname"><em>clientSocket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje pojedynczego klienta: odbiera żądania, wysyła odpowiedzi. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientSocket</td><td>gniazdo klienta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00052">52</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="a6346743e1489653ff3c603ac393761ab" name="a6346743e1489653ff3c603ac393761ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6346743e1489653ff3c603ac393761ab">&#9670;&#160;</a></span>handleDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResponse.html">Response</a> Server.handleDelete </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje operację delete dla danego typu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00132">132</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="ab4a5c302d548dedd073c9339f0fcae4e" name="ab4a5c302d548dedd073c9339f0fcae4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a5c302d548dedd073c9339f0fcae4e">&#9670;&#160;</a></span>handleDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResponse.html">Response</a> Server.handleDraw </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje operację draw dla danego typu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00184">184</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="ae5c2fd24787d30ba53f7644da65c1624" name="ae5c2fd24787d30ba53f7644da65c1624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c2fd24787d30ba53f7644da65c1624">&#9670;&#160;</a></span>handleInsert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResponse.html">Response</a> Server.handleInsert </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje operację insert dla danego typu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00109">109</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="a96ec7e298fe7650284e843c6fcae5ba4" name="a96ec7e298fe7650284e843c6fcae5ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ec7e298fe7650284e843c6fcae5ba4">&#9670;&#160;</a></span>handleRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResponse.html">Response</a> Server.handleRequest </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przetwarza żądanie klienta i zwraca odpowiedni obiekt <a class="el" href="classResponse.html" title="Klasa reprezentująca odpowiedź serwera na żądanie klienta.">Response</a>. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>żądanie tekstowe </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>odpowiedź <a class="el" href="classResponse.html" title="Klasa reprezentująca odpowiedź serwera na żądanie klienta.">Response</a> </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00078">78</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="a30119dedeb7f2f8a3fd6c85f2ddc89e4" name="a30119dedeb7f2f8a3fd6c85f2ddc89e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30119dedeb7f2f8a3fd6c85f2ddc89e4">&#9670;&#160;</a></span>handleSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResponse.html">Response</a> Server.handleSearch </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje operację search dla danego typu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00158">158</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="aa3fbc6151e35b67da9fc169408539cf6" name="aa3fbc6151e35b67da9fc169408539cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fbc6151e35b67da9fc169408539cf6">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Server.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Punkt wejścia serwera. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00028">28</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="ace0ce586af36c8024040a43db4054ab7" name="ace0ce586af36c8024040a43db4054ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0ce586af36c8024040a43db4054ab7">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server.run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uruchamia serwer i obsługuje klientów w osobnych wątkach. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00035">35</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a70301b3598482bd31d5286edec6c5ef5" name="a70301b3598482bd31d5286edec6c5ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70301b3598482bd31d5286edec6c5ef5">&#9670;&#160;</a></span>doubleTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinaryTree&lt;Double&gt; Server.doubleTree = new BinaryTree&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drzewo binarne dla typu double. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00021">21</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="a7be01a0476157ee0803e5d8483a69502" name="a7be01a0476157ee0803e5d8483a69502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be01a0476157ee0803e5d8483a69502">&#9670;&#160;</a></span>intTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinaryTree&lt;Integer&gt; Server.intTree = new BinaryTree&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drzewo binarne dla typu int. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00019">19</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="aa4e450c304096ba29cc41428f98449a2" name="aa4e450c304096ba29cc41428f98449a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e450c304096ba29cc41428f98449a2">&#9670;&#160;</a></span>PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int Server.PORT = 1234</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port nasłuchiwania serwera. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00016">16</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="a675a0e23d6ed4d2b05128932c9da5179" name="a675a0e23d6ed4d2b05128932c9da5179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675a0e23d6ed4d2b05128932c9da5179">&#9670;&#160;</a></span>stringTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinaryTree&lt;String&gt; Server.stringTree = new BinaryTree&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drzewo binarne dla typu string. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="Server_8java_source.html#l00023">23</a> pliku <a class="el" href="Server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li><a class="el" href="Server_8java_source.html">Server.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
