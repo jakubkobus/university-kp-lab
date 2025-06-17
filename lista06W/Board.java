@@ -97,7 +97,7 @@ public class Board {
    * @param newY   Nowa kolumna.
    * @return Status ruchu (np. czy ruch był poprawny, czy wilk złapał królika).
    */
-  public synchronized MoveStatus moveAnimal(Animal animal, int newX, int newY) {
+  public MoveStatus moveAnimal(Animal animal, int newX, int newY) {
     int oldX = animal.getX();
     int oldY = animal.getY();
 

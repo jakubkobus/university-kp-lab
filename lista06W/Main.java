@@ -30,7 +30,7 @@ public class Main {
    */
   public static void main(String[] args) {
     if (args.length < 4) {
-      System.out.println("Usage: java Main n m rabbits k");
+      System.out.println("Uzycie: java Main n m rabbits k");
       return;
     }
     int n = Integer.parseInt(args[0]);
